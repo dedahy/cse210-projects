@@ -63,3 +63,9 @@ public class First
         }
     }
 }
+
+
+
+//Console.WriteLine("Welcome to the Journal Program!");
+        //First menu = new First();
+        //menu.Menu();
