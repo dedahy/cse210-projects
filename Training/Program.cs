@@ -1,37 +1,51 @@
 ﻿using System;
-using System.IO;
-using System.Security.Cryptography;
+using System.IO; 
+using System.Collections;
+using System.Threading.Tasks.Dataflow;
+
 
 class Program
 {
     static void Main(string[] args)
     {
-        List<string>list = new List<string>();
-        Console.Write("Name: ");
-        string name = Console.ReadLine();
-        Console.Write("Age: ");
-        string age = Console.ReadLine();
-        list.Add(name);
-        list.Add(age);
-
-        string fileName = "myFile.txt";
-
-        using (StreamWriter outputFile = new StreamWriter(fileName))
+        string file = "myFile.txt";
+        
+        try
         {
-            foreach(string item in list)
+            if (File.Exists(file)) 
+        {
+            string[] linese = System.IO.File.ReadAllLines(file);
+            foreach(string s in linese)
             {
-                outputFile.WriteLine(item);
+                Console.WriteLine(s);
+            }
+        }
+        }
+
+        catch
+        {
+            
+        }
+        Entry entry = new Entry();
+        entry.Display();
+        
+
+        using (StreamWriter outputFile = new StreamWriter(file))
+        {
+            foreach (string item in entry._promptText)
+            {
+                outputFile.WriteLine("+r",item);
+                
             }
         }
 
-        string filename = "myFile.txt";
-        string[] lines = System.IO.File.ReadAllLines(filename);
-
+        string[] lines = System.IO.File.ReadAllLines(file);
+        
         foreach (string line in lines)
         {
-           Console.WriteLine(line);
+            Console.WriteLine(line);
         }
 
-}
-
+    
+    }  
 }
