@@ -1,10 +1,50 @@
 using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 
+[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 class Program
 {
     static void Main(string[] args)
-    {
+    {   
+        Assignment a1 = new Assignment("Samuel Bennett", "Multiplication");
+        Console.WriteLine(a1.GetSummary());
+
+        // Now create the derived class assignments
+        MathAssignment a2 = new MathAssignment("Roberto Rodriguez", "Fractions", "7.3", "8-19");
+        Console.WriteLine(a2.GetSummary());
+        Console.WriteLine(a2.GetHomeworkList());
+
+        WritingAssignment a3 = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
+        Console.WriteLine(a3.GetSummary());
+        Console.WriteLine(a3.GetWritingInformation());
+        /*
+        Assignment studentInfo = new Assignment("Dedahy Jean Ombilahy", "Division");
+        MathAssignment examen = new MathAssignment("Tody Jean Marc", "Division", "Section 7.3", "Problems 8-19");
+        WritingAssignment assignment = new WritingAssignment("Bernadia Jessica", "Geography", "World War II");
+
+        string student = studentInfo.GetStudentName();
+        string summary = examen.GetSummary();
+        string topic = examen.GetHomeworkList();
+        string title = assignment.GetWrittingInformation();
+        //student Name
+
+        Console.WriteLine(student);
+
+        //Math Class
+
+        Console.WriteLine(student);
+        Console.WriteLine(topic);
+
+        //Writing Class
+
+        Console.WriteLine(student);
+        Console.WriteLine(title);
+
+        //Summary
+
+        Console.WriteLine(student);
+        Console.WriteLine(summary);
+
         float number = -1;
         List<float>numbers = new List<float>();
         
@@ -42,5 +82,11 @@ class Program
 
         Console.WriteLine($"The max is: {max}");
         //
+        */
+    }
+
+    private string GetDebuggerDisplay()
+    {
+        return ToString();
     }
 }

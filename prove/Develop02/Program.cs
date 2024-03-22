@@ -1,6 +1,8 @@
 using System;
-using System.IO; 
+using System.Diagnostics;
+using System.IO;
 
+[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 class Program
 {
     static void Main(string[] args)
@@ -72,4 +74,8 @@ class Program
 
     }
 
+    private string GetDebuggerDisplay()
+    {
+        return ToString();
+    }
 }
