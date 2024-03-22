@@ -21,7 +21,7 @@ class Program
         {
         using(StreamWriter outputFile = new StreamWriter(journal._file_name))
             {
-                //We create the file    
+                //We create the file
             }            
         }  
                     
