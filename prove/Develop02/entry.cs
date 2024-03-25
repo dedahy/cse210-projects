@@ -11,15 +11,13 @@ public class Entry
     public string _entryText;
 
     public List<string>_promptText = new List<string>();
-    
-    Journal journal = new Journal();
 
     public void Display()
     {
         Random randomGenerator = new Random();
         int someRandomNumber = randomGenerator.Next(0, _promptText.Count());
         Console.WriteLine(_promptText.ElementAt(someRandomNumber));
-        Console.ReadKey();        
+        Console.ReadKey();       
     }
    
 }

@@ -1,0 +1,113 @@
+/*        
+        if(time>=20 && time<=30)
+        {
+            
+            for(int i = 2; i>0;i--)
+            {
+                DisplayQuestion();
+                activity.ShowSpinner(time);
+                Console.WriteLine();
+            }
+            
+        }
+        else if(time<=10)
+        {
+            DisplayQuestion();
+            activity.ShowSpinner(time);   
+            Console.WriteLine();
+            
+        }
+        else
+        {
+            for(int i = 3; i>0;i--)
+            {
+                DisplayQuestion();
+                activity.ShowSpinner(time);
+                Console.WriteLine();
+            }
+        }
+        */
+   
+
+
+
+        /*        
+        double counter = 0;
+        counter = time / 10;
+        int convert_Int = (int)counter;
+
+        for(int a = convert_Int; a>0; a--)
+        {
+            cal = (int)_EnterTime * 1000 / (2*convert_Int);
+        
+            DisplayQuestion();
+            Thread.Sleep(cal);
+            Console.WriteLine();
+        }
+        */
+        
+
+
+/*
+
+
+        if(time<=10)
+        {
+            breath_in =  time * 1000 / 8;
+            breath_out = time * 1000 / 12;
+            Console.Write($"Breathe in...");
+            activity.ShowCountDown(4,breath_in);
+            Console.WriteLine();
+            Console.Write($"Breathe out...");
+            activity.ShowCountDown(6,breath_out);
+            Console.WriteLine("\n");
+        }
+        else if(time>10&&time<=30)
+        {
+            for(int e =4; e>0;e--)
+            {
+                int dispatch = time * 1000 / 4;
+                breath_in =  dispatch / 9;
+                breath_out = dispatch / 10;
+                Console.Write($"Breathe in...");
+                activity.ShowCountDown(4,breath_in);
+                Console.WriteLine();
+                Console.Write($"Breathe out...");
+                activity.ShowCountDown(6,breath_out);
+                Console.WriteLine("\n");
+            }
+        }
+        else
+        {
+            for(int e =5; e>0;e--)
+            {
+                int dispatch = time * 1000 / 4;
+                breath_in =  dispatch / 11;
+                breath_out = dispatch / 12;
+                Console.Write($"Breathe in...");
+                activity.ShowCountDown(4,breath_in);
+                Console.WriteLine();
+                Console.Write($"Breathe out...");
+                activity.ShowCountDown(6,breath_out);
+                Console.WriteLine("\n");
+            }
+        }
+        */
+            
+        
+
+/*
+
+        while(count < 4)
+        {
+            Console.Write($"Breathe in...");
+            activity.ShowCountDown(4,1000);
+            Console.WriteLine();
+            Console.Write($"Breathe out...");
+            activity.ShowCountDown(6,1000);
+            Thread.Sleep(csmc);
+            Console.Write("\b \b");
+            Console.WriteLine("\n");
+            count++;
+        }
+*/
