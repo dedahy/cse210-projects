@@ -32,8 +32,7 @@ public class ReflectingActivity:Activity
 
         int time = activity.duration();
 
-        DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(time);
+        DateTime endTime = currentTime.AddSeconds(time);
 
         while(DateTime.Now < endTime)
         {
