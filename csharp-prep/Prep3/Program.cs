@@ -1,47 +1,34 @@
 using System;
+using System.Diagnostics;
 
+[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 class Program
 {
     static void Main(string[] args)
     {           
+        Fraction fraction1 = new Fraction();
+
+        Console.WriteLine(fraction1.GetFractionString());
+        Console.WriteLine(fraction1.GetDecimalValue());
         
-        string decision = "";
-        do
-        {
+        Fraction fraction2 = new Fraction(5);
 
-            Random randomGenerator = new Random();
-            float magic_number = randomGenerator.Next(1, 100);
-            float guess = 0;
-            int count= 0;
+        Console.WriteLine(fraction2.GetFractionString());
+        Console.WriteLine(fraction2.GetDecimalValue());
         
-            while (guess != magic_number)
-            {
-                Console.Write("What is your guess? ");
-                guess = float.Parse(Console.ReadLine());
+        Fraction fraction3 = new Fraction(3,4);
 
-                count++;
+        Console.WriteLine(fraction3.GetFractionString());
+        Console.WriteLine(fraction3.GetDecimalValue());
 
-                if (guess < magic_number)
-                {
-                    Console.WriteLine("Higher");
-                }
-                else if (guess > magic_number)
-                {
-                    Console.WriteLine("Lower");
-                }
-                else
-                {
-                    Console.WriteLine("You guessed it!");
-                }
-            }
-            Console.WriteLine($"Your number of guess is {count}.");
+        Fraction fraction4 = new Fraction(1,3);
 
-        Console.Write("Would you still like to continue?");
-        decision = Console.ReadLine().ToLower();
-
-        }
-        while(decision == "yes");
-        Console.WriteLine("Thank you for taking time to play my guess number game.");
+        Console.WriteLine(fraction4.GetFractionString());
+        Console.WriteLine(fraction4.GetDecimalValue());
     }
-        
+
+    private string GetDebuggerDisplay()
+    {
+        return ToString();
+    }
 }
