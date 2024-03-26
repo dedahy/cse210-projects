@@ -30,7 +30,7 @@ public class ReflectingActivity:Activity
         activity.ShowCountDown(5, 1000);
         Console.WriteLine();
 
-        int time = activity.dura[0];
+        int time = activity.duration();
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(time);
@@ -43,7 +43,6 @@ public class ReflectingActivity:Activity
         }        
      
         activity.DisplayEndingMessage();
-        activity.dura.Clear();
         
     }
     public void DisplayPrompt()

@@ -3,7 +3,7 @@ public class BreathingActivity : Activity
     
     public BreathingActivity(string name, string description, int duration):base(name, description, duration)
     {
-        
+
     }
 
     public void Run()
@@ -14,7 +14,9 @@ public class BreathingActivity : Activity
         activity.DisplayStartingMessage();
         activity.ShowSpinner(5);
 
-        int time = activity.dura[0];
+        //int time = activity.dura[0];
+
+        int time = activity.duration();
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(time);
@@ -33,7 +35,6 @@ public class BreathingActivity : Activity
             i++;
 
         }
-        activity.dura.Clear();
         
         activity.DisplayEndingMessage();
         

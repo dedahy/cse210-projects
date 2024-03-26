@@ -30,7 +30,7 @@ public class ListingActivity:Activity
         Console.Write("You may begin in: ");
         activity.ShowCountDown(3, 1000);
 
-        int time = activity.dura[0];
+        int time = activity.duration();
         
         DateTime future = currentTime.AddSeconds(time);
         while (future > currentTime)
@@ -41,7 +41,6 @@ public class ListingActivity:Activity
         }
         Console.WriteLine($"\nYou listed {_count} items.\n");
         activity.DisplayEndingMessage();
-        activity.dura.Clear();
         using (StreamWriter writer = new StreamWriter(_file_name))
             {
                 foreach (string item in _getprompts)

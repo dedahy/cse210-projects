@@ -10,8 +10,6 @@ public class Activity
     private string _desciption;
     private int _duration;
 
-    public List<int> dura = new List<int>();
-
     public Activity(string name, string description, int duration)
     {
         _name = name;
@@ -29,8 +27,12 @@ public class Activity
         _duration = int.Parse(Console.ReadLine());
         Console.WriteLine();
         Console.WriteLine("Get ready...\n");
-        dura.Add(_duration);   
         
+    }
+
+    public int duration()
+    {
+        return _duration;
     }
     public void DisplayEndingMessage()
     {
