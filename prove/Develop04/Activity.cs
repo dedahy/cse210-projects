@@ -1,11 +1,7 @@
 using System.Data;
 
 public class Activity
-{  
-    DateTime startTime = DateTime.Now;
-
-    DateTime currentTime = DateTime.Now;
-    
+{   
     private string _name;
     private string _desciption;
     private int _duration;
