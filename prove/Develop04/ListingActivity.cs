@@ -19,7 +19,7 @@ public class ListingActivity:Activity
         int duration =0;
         Activity activity = new Activity("Listing", description, duration);
         activity.DisplayStartingMessage();
-        activity.ShowSpinner(1000);
+        activity.ShowSpinner(5);
         Console.Write($"--- ");
         Thread.Sleep(1000);
         GetRandomPrompt();
