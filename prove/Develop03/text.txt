@@ -1,0 +1,89 @@
+public void Run()
+    {
+        List<string> words = new List<string>();
+        List<string> clean = new List<string>();
+        List<int> iii = new List<int>();
+        int[] numbers = [0,1,2,3];
+        int ii = i(numbers);
+        string verse = $"{reference()[ii]} {Text()[ii]}";
+        string[] text = Text()[ii].Split(" ");
+        Console.WriteLine(verse);
+
+        foreach(string word in text)
+        {
+            words.Add(word);
+        }
+        clean.AddRange(words);
+        string decision = "";
+
+
+        while(decision != "quit")
+        {
+            Console.WriteLine("\n\nPlease enter to 'continue' or type 'quit' to finish:");
+
+            decision = Console.ReadLine().ToLower();
+            int a = 0;
+            int[] repeat = [1,2,3];
+            int z = i(repeat);
+            if(z > clean.Count())
+            {
+                iii.Add(clean.Count());
+            }
+            else
+            {
+             iii.Add(z);
+            }
+            int az = iii[0];
+            while(a < az)
+            {
+
+                string word = word_array(words);
+                int word_lengh = 0;
+                string hide = "";
+                int index = 0;
+
+                int y = word.Length;
+                string hide1 = string.Concat(Enumerable.Repeat("_", word_lengh));
+
+
+                if(word.Contains("_"))
+                {                                
+                    string new_word = word_array(clean);
+
+                    word_lengh = new_word.Length;
+
+                    hide = string.Concat(Enumerable.Repeat("_", word_lengh));
+
+                    index = words.IndexOf(new_word);
+
+                    words[index] = hide;
+                    Thread.Sleep(100);
+                    clean.Remove(new_word);
+                }
+                else
+                {
+                    word_lengh = word.Length;
+                    hide = string.Concat(Enumerable.Repeat("_", word_lengh));
+                    index = words.IndexOf(word);
+
+                    words[index] = hide;
+                    clean.Remove(word);
+                }
+
+                a++;
+            }
+
+            iii.Clear();
+            Console.WriteLine();
+            Console.Write(reference()[ii]);
+            foreach(string wordd in words)
+            {                
+                Console.Write($" {wordd}");
+            }
+
+            if(clean.Count() == 0)
+            {
+                Environment.Exit(0);
+            }            
+        }
+    }

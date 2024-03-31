@@ -1,0 +1,78 @@
+//            string prompts = "";
+//            int countLetter = 0;
+//            string underscore = "";
+//            string newText = "";
+
+            //int index = NewText[0].IndexOf(display);
+            //Console.WriteLine($"{display} : {index}");
+            //Console.WriteLine(NewText[0]);
+            
+
+//            if(display == underscore)
+//            {                
+//                List<string> test = new List<string>();
+//                test.Add(newText);
+//                int index = test[0].IndexOf(display);
+//                string a = test[0].Remove(index);
+//                test.Clear();
+//                test.Add(a);
+//
+//                countLetter = generate.Next(0, test[0].Length);
+//                display = test[0].Split(" ").ElementAt(countLetter);
+//                countLetter = display.Count();
+//                underscore = string.Concat(Enumerable.Repeat("_", countLetter));
+//                newText = test[0].Replace(display, underscore);
+//                NewText.Clear();
+//                NewText.Add(newText);
+//                Console.WriteLine($"{display}");
+//            }
+//            else            
+//            {   
+//                prompts = NewText[0];
+//                countLetter = display.Count();
+//                underscore = string.Concat(Enumerable.Repeat("_", countLetter));
+//                int index = prompts.IndexOf(display);
+//                newText = prompts.Replace(display, underscore);
+//                NewText.Clear(); 
+//                NewText.Add(newText);
+//            }
+            
+            //Console.Clear();
+            //Console.WriteLine(NewText[0]);  
+
+//word.Run();
+
+        string text = "Lava ny olona a ny am manodidina ny tanana.";
+        string[] array_text = text.Split(" ");
+        Console.WriteLine(text);
+        List<string> test = new List<string>();
+        foreach(string item in array_text)
+        {
+            test.Add(item);
+        }
+        foreach(string item in test)
+        {
+            Console.Write($"{item} ");
+        }
+        int index = test.IndexOf("Lava");
+        
+        test[0]="____";
+        Console.WriteLine(test[0]);
+        //Console.WriteLine(test);
+        //string[] a = text.Split(" ");
+        //int e = text.IndexOf("lava");
+        //int s = text.Split(" ").Count();
+        //Console.WriteLine(s);
+        //a[1]="__";
+        ////text.Split(" ")[0] = "__"; 
+        //int za = text.IndexOf("manodidina");
+        //int nue = text.Count() - za;
+        
+        //Console.WriteLine($"{s}, {text.Count()}, {za}, {nue}");
+        //Console.WriteLine(text.Split(" ")[za]);
+
+        //Console.WriteLine(text.Split(" ")[za]);
+        
+        //text.Replace(text.Split(" ")[1], "__");
+        //Console.WriteLine(text.Replace(text.Split(" ")[1*2], "__"));
+        //Console.WriteLine(a);
