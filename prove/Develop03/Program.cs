@@ -20,7 +20,7 @@ class Program
         s.text.Add("For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
         s.text.Add("I would desire that ye should consider on the blessed and happy state of those that keep the commandments of God. For behold, they are blessed in all things, both temporal and spiritual; and if they hold out faithful to the end they are received into heaven, that thereby they may dwell with God in a state of never-ending happiness. O remember, remember that these things are true; for the Lord God hath spoken it.");
         s.text.Add("And, if you keep my commandments and endure to the end you shall have eternal life, which gift is the greatest of all the gifts of God");
-        s.text.Add("Be ye therefore perfect, even as your Father which is in heaven is perfect.");
+            s.text.Add("Be ye therefore perfect, even as your Father which is in heaven is perfect.");
 
         rf.references.Add("John 3:16");
         rf.references.Add("Mosiah 2:41 And moreover");
@@ -47,7 +47,6 @@ class Program
         clean.AddRange(words);
 
         Console.WriteLine(scripture);
-        Console.WriteLine();
 
         string decision = "";
 
