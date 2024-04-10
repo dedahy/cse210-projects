@@ -1,0 +1,17 @@
+//s.Journal(file, points, names, descr, bntimes, check);
+
+
+Console.WriteLine("The types of goals are:\n\n    1.Simple Goal\n    2.Eternal Goal\n    3.Checklist Goal\n");             
+                 
+                Console.WriteLine();
+                Console.Write("Which type of goal would you like to create? ");
+                //int nbr = int.Parse(Console.ReadLine());
+                int nbr = int.Parse(Console.ReadLine());
+
+                s.simple(names, descr, points, bntimes, check, nbr);
+.
+
+
+
+s.list_activity(names, descr, check);
+

@@ -15,6 +15,30 @@ namespace milestone
             _points = points;
         }
 
+        public void RecordEvent(List<string>names, List<string>desc, List<int>points)
+        {                                    
+            Console.WriteLine();
+            Console.Write("What is the name of your goal? ");
+            string name = Console.ReadLine();
+            Console.WriteLine();
+            Console.Write("What is a short description of it? ");
+            string description = Console.ReadLine();
+            Console.WriteLine();
+            
+            Console.Write("What is the amount of points associated with this goal? ");
+            int point = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+                    
+            names.Add(name);
+            desc.Add(description);
+            points.Add(point);
+
+        }        
+        
+        
+        
+
+        public abstract string GetStringRepresentation();
 
     }
 
